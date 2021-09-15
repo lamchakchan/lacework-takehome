@@ -1,0 +1,22 @@
+{
+  "name": "lacework-takehome",
+  "version": "1.0.0",
+  "description": "",
+  "main": "publisher.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lamchakchan/lacework-takehome.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lamchakchan/lacework-takehome/issues"
+  },
+  "homepage": "https://github.com/lamchakchan/lacework-takehome#readme",
+  "dependencies": {
+    "bunnybus": "^6.0.1"
+  }
+}
