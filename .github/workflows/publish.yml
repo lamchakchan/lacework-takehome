@@ -17,7 +17,7 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
       - run: npm i
-      - run: node publish.js
+      - run: node publisher.js
         env:
           RMQ_HOSTNAME: ${{secrets.RMQ_HOSTNAME}}
           RMQ_USER: ${{secrets.RMQ_USER}}
