@@ -1,4 +1,4 @@
-name: Publish
+name: Subscribe
 
 on:
   workflow_dispatch: {}
