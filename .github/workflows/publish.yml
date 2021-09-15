@@ -1,0 +1,24 @@
+name: Publish
+
+on:
+  workflow_dispatch: {}
+
+jobs:
+  test:
+    name: Run Test Suite
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [ '12' ]
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node }}
+      - run: npm i
+      - run: node publish.js
+        env:
+          RMQ_HOSTNAME: ${{secrets.RMQ_HOSTNAME}}
+          RMQ_USER: ${{secrets.RMQ_USER}}
+          RMQ_PASSWORD: ${{secrets.RMQ_PASSWORD}}
